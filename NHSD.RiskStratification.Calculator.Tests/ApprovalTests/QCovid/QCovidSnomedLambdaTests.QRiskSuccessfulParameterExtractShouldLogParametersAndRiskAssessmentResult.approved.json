@@ -1,0 +1,190 @@
+﻿{
+    "@t": "2020-03-14T09:00:00.0000000Z",
+    "@mt": "Successfully extracted parameters {@data}",
+    "data": {
+        "PostcodeArea": null,
+        "Age": 42,
+        "Bmi": 66.04732181739004,
+        "Sex": "Male",
+        "EncryptedTownsendScore": {
+            "Code": 301,
+            "Message": "No postcode was provided. A Townsend score of 0 will be used."
+        },
+        "HousingCategory": "Neither",
+        "Ethnicity": "Not recorded",
+        "ClinicalInformation": {
+            "Diabetes": "None",
+            "ChronicKidneyDisease": "No serious kidney disease",
+            "SickleCellOrSevereCombinedImmunodeficiencySyndrome": "None",
+            "SickleCellOrSevereCombinedImmunodeficiencySyndromeViaBool": false,
+            "LearningDisabilityOrDownsSyndrome": "Neither",
+            "CancerTreatmentsAndImmunoSuppressants": {
+                "ChemotherapyGroup": "No Chemotherapy in the last 12 months",
+                "RadioTherapyInLast6Months": false,
+                "BoneMarrowTransplantInLast6Months": false,
+                "CancerOfBloodOrBoneMarrow": false,
+                "SolidOrganTransplant": false,
+                "PrescribedImmunoSuppressants": false,
+                "PrescribedOralSteroids": false,
+                "$type": "CancerTreatmentsAndImmunoSuppressants"
+            },
+            "RespiratoryProblems": {
+                "Asthma": false,
+                "TakingAntiLeukotrieneOrLaba": false,
+                "CysticFibrosisBronchiectasisAlveolitis": false,
+                "PulmonaryHypertensionOrFibrosis": false,
+                "Copd": false,
+                "LungOrOralCancer": false,
+                "$type": "RespiratoryProblems"
+            },
+            "HeartOrCirculationProblems": {
+                "CongenitalHeartProblem": false,
+                "CoronaryHeartDisease": false,
+                "StrokeOrTia": false,
+                "AtrialFibrillation": false,
+                "HeartFailure": false,
+                "PeripheralVascularDisease": false,
+                "ThrombosisOrPulmonaryEmbolus": false,
+                "$type": "HeartOrCirculationProblems"
+            },
+            "NeurologicalProblems": {
+                "ParkinsonsDisease": false,
+                "Epilepsy": false,
+                "Dementia": false,
+                "MotorNeuroneDiseaseOrMultipleSclerosisOrMyaestheniaOrHuntingtonsChorea": false,
+                "CerebralPalsy": false,
+                "$type": "NeurologicalProblems"
+            },
+            "OtherConditions": {
+                "SevereMentalIllness": false,
+                "LiverCirrhosis": false,
+                "RheumatoidArthritisOrSle": false,
+                "PriorFractureOfHipWristSpineHumerus": false,
+                "$type": "OtherConditions"
+            },
+            "$type": "ClinicalInformation"
+        },
+        "$type": "RiskInput"
+    },
+    "correlationId": null,
+    "requestId": null,
+    "method": null,
+    "url": null,
+    "origin": null,
+    "SourceContext": "NHSD.RiskStratification.Calculator.Lambda.QCovidSnomedLambda",
+    "algorithmVersion": "1.1.0.0",
+    "algorithmAssemblyName": "QCovidRiskCalculator",
+    "applicationVersion": "1.0.0.0",
+    "componentName": "calcengine",
+    "environment": null,
+    "riskAssessmentType": "qcovid"
+}
+{
+    "@t": "2020-03-14T09:00:01.0000000Z",
+    "@mt": "Created a risk assessment result {@data}",
+    "data": {
+        "Predictions": [
+            {
+                "outcome": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "419620001",
+                            "display": "Death (event)"
+                        }
+                    ],
+                    "text": "Death attributed to COVID-19"
+                },
+                "probabilitydecimal": 0.00563,
+                "probabilityDecimal": 0.00563,
+                "relativeRisk": 2.8564180618975139523084728564
+            },
+            {
+                "outcome": {
+                    "coding": [
+                        {
+                            "system": "http://nhsd.nhs.uk/riskassessment",
+                            "code": "Hospitalisation",
+                            "display": "Hospitalisation"
+                        }
+                    ],
+                    "text": "COVID-19"
+                },
+                "probabilitydecimal": 0.104126,
+                "probabilityDecimal": 0.104126,
+                "relativeRisk": 3.023754210709722383552096643
+            },
+            {
+                "outcome": {
+                    "coding": [
+                        {
+                            "system": "http://nhsd.nhs.uk/riskassessment",
+                            "code": "BaselineDeath",
+                            "display": "Baseline death for age and sex"
+                        }
+                    ],
+                    "text": "Death attributed to COVID-19 for same age and sex but no other risk factors"
+                },
+                "probabilitydecimal": 0.001971,
+                "probabilityDecimal": 0.001971,
+                "relativeRisk": 1
+            },
+            {
+                "outcome": {
+                    "coding": [
+                        {
+                            "system": "http://nhsd.nhs.uk/riskassessment",
+                            "code": "BaselineHospitalisation",
+                            "display": "Baseline hospitalisation for age and sex"
+                        }
+                    ],
+                    "text": "COVID-19 for same age and sex but no other risk factors"
+                },
+                "probabilitydecimal": 0.034436,
+                "probabilityDecimal": 0.034436,
+                "relativeRisk": 1
+            }
+        ],
+        "Issues": [
+            {
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                    "coding": [
+                        {
+                            "system": "http://qcovid.org",
+                            "code": "205"
+                        }
+                    ],
+                    "text": "The provided BMI is above the calculators range. The maximum valid BMI will be used instead."
+                }
+            },
+            {
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                    "coding": [
+                        {
+                            "system": "http://qcovid.org",
+                            "code": "301"
+                        }
+                    ],
+                    "text": "No postcode was provided. A Townsend score of 0 will be used."
+                }
+            }
+        ]
+    },
+    "calculation": "warn",
+    "correlationId": null,
+    "requestId": null,
+    "method": null,
+    "url": null,
+    "origin": null,
+    "SourceContext": "NHSD.RiskStratification.Calculator.Lambda.QCovidSnomedLambda",
+    "algorithmVersion": "1.1.0.0",
+    "algorithmAssemblyName": "QCovidRiskCalculator",
+    "applicationVersion": "1.0.0.0",
+    "componentName": "calcengine",
+    "environment": null,
+    "riskAssessmentType": "qcovid"
+}

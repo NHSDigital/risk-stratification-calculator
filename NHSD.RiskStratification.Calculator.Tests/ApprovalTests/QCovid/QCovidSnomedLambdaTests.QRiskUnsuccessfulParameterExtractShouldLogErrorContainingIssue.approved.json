@@ -1,0 +1,34 @@
+﻿{
+    "@t": "2020-03-14T09:00:00.0000000Z",
+    "@mt": "Failed to extract parameters {@data}",
+    "@l": "Error",
+    "data": {
+        "resourceType": "OperationOutcome",
+        "meta": {
+            "versionId": "QCovidRiskCalculator 1.1.0.0"
+        },
+        "issue": [
+            {
+                "severity": "error",
+                "code": "invalid",
+                "diagnostics": "Observation of CodeableConcept[424144002] using system [http://snomed.info/sct] Value must be between 19 and 100",
+                "expression": [
+                    "#age"
+                ]
+            }
+        ]
+    },
+    "calculation": "fail",
+    "correlationId": null,
+    "requestId": null,
+    "method": null,
+    "url": null,
+    "origin": null,
+    "SourceContext": "NHSD.RiskStratification.Calculator.Lambda.QCovidSnomedLambda",
+    "algorithmVersion": "1.1.0.0",
+    "algorithmAssemblyName": "QCovidRiskCalculator",
+    "applicationVersion": "1.0.0.0",
+    "componentName": "calcengine",
+    "environment": null,
+    "riskAssessmentType": "qcovid"
+}

@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    NHSD.RiskStratification.Calculator
+
+    qcovid
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+    Function:
+        Runtime: dotnetcore3.1
+        Timeout: 10
+    Api:
+        Cors:
+            AllowMethods: "'POST'"
+            AllowHeaders: "'Content-Type'"
+            AllowOrigin: "'*'"
+
+Parameters:
+    QCovidLicenceKey:
+        Description: 'Licence key for Oxford algorithm'
+        Type: String
+        Default:
+    ENVIRONMENT:
+        Description: 'environment variable'
+        Type: String
+        Default: local    
+    RISKSTRAT_QCovidTownsendIndex__Region:
+        Description: 'AWS region for the townsend index files'
+        Type: String        
+        Default:
+    RISKSTRAT_QCovidTownsendIndex__Bucket:
+        Description: 'AWS bucket for the townsend index files'
+        Type: String        
+        Default:
+    RISKSTRAT_QCovidTownsendIndex__Path:
+        Description: 'AWS folder path to the townsend index files'
+        Type: String        
+        Default:
+
+Resources:
+
+    qcovidFunction:
+        Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+        Properties:
+            CodeUri: ./bin/Release/netcoreapp3.1/publish/
+            Handler: NHSD.RiskStratification.Calculator::NHSD.RiskStratification.Calculator.Lambda.QCovidSnomedLambda::FunctionHandler
+            Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+                Variables:
+                    QCovidLicenceKey: !Ref QCovidLicenceKey
+                    RISKSTRAT_QCovidTownsendIndex__Region: !Ref RISKSTRAT_QCovidTownsendIndex__Region
+                    RISKSTRAT_QCovidTownsendIndex__Bucket: !Ref RISKSTRAT_QCovidTownsendIndex__Bucket
+                    RISKSTRAT_QCovidTownsendIndex__Path: !Ref RISKSTRAT_QCovidTownsendIndex__Path
+                    ENVIRONMENT: !Ref ENVIRONMENT
+            Tracing: Active  # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
+            Events:
+                CatchAll:
+                    Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+                    Properties:
+                        Path: /api/qcovid
+                        Method: POST
+
+Outputs:
+
+    qcovidURL:
+      Description: "API Gateway endpoint URL for Prod environment for qcovid Function"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/proxy"
+
+    qcovidFunctionArn:
+      Description: "qcovid Lambda Function ARN"
+      Value: !GetAtt qcovidFunction.Arn
+
+    qcovidFunctionIamRole:
+      Description: "Implicit IAM Role created for qcovid function"
+      Value: !GetAtt qcovidFunctionRole.Arn

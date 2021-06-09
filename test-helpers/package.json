@@ -1,0 +1,30 @@
+{
+  "name": "covid-risk-stratification-api-test-helpers",
+  "description": "Helper methods for COVID Risk Stratification API test projects",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@commitlint/cli": "^11.0.0",
+    "babel-jest": "^26.3.0",
+    "commitlint-config-jira": "^1.4.1",
+    "commitlint-plugin-jira-rules": "^1.4.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-formatter-gitlab": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2"
+  },
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext .js ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

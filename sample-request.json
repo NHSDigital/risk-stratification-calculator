@@ -1,0 +1,603 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "age",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "424144002"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 35,
+          "unit": "years",
+          "code": "years",
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "sex",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "734000001"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "248153007"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ethnic-group",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "364699009"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "494131000000105"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "housing",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "724741000000100"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "160724009"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "postcode",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "184102003"
+            }
+          ]
+        },
+        "valueString": "LS1 5HN"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "height",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "50373000"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 180,
+          "unit": "cm",
+          "code": "cm",
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "weight",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "27113001"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 72,
+          "unit": "kg",
+          "code": "kg",
+          "system": "http://unitsofmeasure.org"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-atrial-fibrillation",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49436004"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-coronary-heart-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "CORONARY_HEART_DISEASE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-heart-failure",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "HEART_FAILURE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-congenital-heart-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "CONGENITAL_HEART_DISEASE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-peripheral-vascular-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "PERIPHERAL_VASCULAR_DISEASE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-asthma",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "ASTHMA"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-chronic-obstructive-pulmonary-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "COPD"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-cystic-fibrosis-bronchiectasis-or-alveolitis",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "CYSTIC_FIBROSIS"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-pulmonary-hypertension-or-fibrosis",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "HYPERTENSION"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "diabetes-type",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "DIABETES_TYPE"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "NONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fracture-of-hip",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "FRACTURE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "kidney-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "KIDNEY_DISEASE"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "NONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "liver",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "197279005"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-epilepsy",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "EPILEPSY"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "tia",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "STROKE_TIA"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-motor-neurone-multiple-sclerosis-myaesthenia",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "MND"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-parkinsons-disease",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49049000"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-dementia",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "52448006"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-cerebral-palsy",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "128188000"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "learning-disability-or-downs-syndrome",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "110359009"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "NONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "has-a-severe-mental-illness",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "SEVERE_MENTAL_ILLNESS"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "rheumatoid-arthritis-or-sle",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "RHEUMATOID_ARTHRITIS"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "sickle-cell-or-immune-deficiency",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "SICKLE_CELL_DISEASE"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "thrombosis-or-pulmonary-embolus",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "THROMBOSIS"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "lung-or-oral-cancer",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "LUNG_ORAL_CANCEL"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "solid-organ-transplant",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "ORGAN_TRANSPLANT"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cancer-of-the-blood-or-bone-marrow",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "BLOOD_CANCER"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bone-marrow-or-stem-cell-transplant",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "BONE_MARROW_TRANSPLANT"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "had-radiotherapy-last-6-months",
+        "code": {
+          "coding": [
+            {
+              "system": "http://nhsd.riskstrat.nhs/qcovid",
+              "code": "RADIOTHERAPY"
+            }
+          ]
+        },
+        "valueBoolean": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+./apitests/.yarn/** linguist-vendored
+*.sh        eol=lf

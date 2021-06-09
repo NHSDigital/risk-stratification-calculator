@@ -1,0 +1,67 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+pub/
+*.orig
+tmp/
+apitests.zip
+apitests/reports/
+dist/
+
+# Visual Studio Code
+.vscode
+
+# Rider
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+[Tt]est[Rr]esults
+reports
+
+# Project configuration
+appsettings.json
+appSecrets.json
+
+# Visual Studio 2015
+.vs/
+.runsettings
+
+# apitesting files
+.pnp.js
+node_modules
+.yarn/
+/NHSD.RiskStratification.Calculator/appsettings.local.json
+
+# recieved files from approval tests
+/NHSD.RiskStratification.Calulator.Tests/ApprovalTests/QCovid/*.received.txt
+
+*.received.txt
+*.received.json
+
+.env
+
+# ignore built townsend converted files
+townsend
